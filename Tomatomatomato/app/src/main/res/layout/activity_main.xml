@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- xmls : xmLNameSpace≒ include stdio.h xml 에서 쓰는 표현들의 기준은 ""에서-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/successBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="집에 가고싶어요,,," />
+</LinearLayout>

@@ -1,0 +1,132 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="My Diary"
+        android:textSize="40dp"
+        android:padding="20dp"
+        android:textStyle="bold"
+        android:textColor="#fff"
+        android:background="#d2a0fd"/>
+
+    <!-- 일기의 년, 월, 일을 입력받는 EditText 위젯-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="right">
+
+        <EditText
+            android:id="@+id/year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="yyyy"
+            android:inputType="number"
+            android:textSize="30dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30dp"
+            android:text="년 " />
+
+        <EditText
+            android:id="@+id/month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="mm"
+            android:inputType="number"
+            android:textSize="30dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="월 "
+            android:textSize="30dp"/>
+
+        <EditText
+            android:id="@+id/day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="dd"
+            android:inputType="number"
+            android:textSize="30dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="일"
+            android:textSize="30dp"/>
+    </LinearLayout>
+
+    <!-- 일기 쓰기(수정)와 일기 읽기 라디오 버튼 부분 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="40dp">
+
+        <Button
+            android:id="@+id/writeMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:text="일기 쓰기(수정)"
+            android:textSize="20dp"/>
+
+        <Button
+            android:id="@+id/readMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="일기 읽기"
+            android:textSize="20dp"/>
+    </LinearLayout>
+
+    <!-- 선택한 날짜에 내용이 존재하지 않을 경우
+         일기를 작성할 수 있도록 해줌-->
+    <LinearLayout
+        android:id="@+id/writeView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_marginTop="30dp">
+
+        <EditText
+            android:id="@+id/inputDiary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"/>
+
+        <Button
+            android:id="@+id/writeOrInsert"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="저장"
+            android:textSize="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/readView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#dfc6f4"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_marginTop="30dp">
+
+        <TextView
+            android:id="@+id/outputDiary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"/>
+    </LinearLayout>
+</LinearLayout>

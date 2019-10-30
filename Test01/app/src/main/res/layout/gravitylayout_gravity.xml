@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 상대 레이아웃
+ 1. 부모 레이아웃의 9가지 위치 중 한 곳에 배치
+ 2. 특정 위젯을 기준으로 하여 배치
+ 2@. ? -->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- gravity & Layout_gravity 차이
+     gravity - 내부의 무엇인가를 정렬
+     Layout_gravity - 본인이 외부의 어디에 정렬 -->
+    <Button
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:id="@+id/ben"
+        android:text="벤자민 팀 버튼"
+        android:textSize="20dp"
+        android:layout_centerInParent="true"/>
+
+    <Button
+        android:layout_width="70dp"
+        android:layout_height="35dp"
+        android:id="@+id/asdf"
+        android:text="asdf"
+        android:layout_above="@+id/ben"
+        android:layout_margin="20dp"/>
+
+    <Button
+        android:layout_width="70dp"
+        android:layout_height="35dp"
+        android:id="@+id/btn"
+        android:text="btn"
+        android:layout_below="@+id/ben"
+        android:layout_alignRight="@+id/ben"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/asdf"
+        android:layout_toLeftOf="@+id/btn"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ben"
+        android:layout_toRightOf="@+id/ben"/>
+
+</RelativeLayout>

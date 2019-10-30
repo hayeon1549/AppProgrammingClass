@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="계산기"
+        android:textSize="50dp"
+        android:gravity="center_horizontal"
+        android:textColor="#000000"/>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <EditText
+            android:id="@+id/input1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:hint="첫 번째 수"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:text="+"
+            android:textSize="40dp"
+            android:textColor="#000"
+            android:id="@+id/qwer"/>
+
+        <EditText
+            android:id="@+id/input2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:hint="첫 번째 수"/>
+    </LinearLayout>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <Button
+            android:id="@+id/plus"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:text="+"
+            android:textSize="40dp"
+            android:layout_margin="5dp"
+            android:background="#e7e7e7"/>
+
+        <Button
+            android:id="@+id/minus"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:text="－"
+            android:textSize="40dp"
+            android:layout_margin="5dp"
+            android:background="#e6e6fa"/>
+
+        <Button
+            android:id="@+id/multiple"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:text="×"
+            android:textSize="40dp"
+            android:layout_margin="5dp"
+            android:background="#9370db"
+            android:textColor="#fff"/>
+
+        <Button
+            android:id="@+id/division"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:text="÷"
+            android:textSize="40dp"
+            android:layout_margin="5dp"
+            android:background="#483d8b"
+            android:textColor="#fff"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textR"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="결과 : "
+        android:textSize="30dp"
+        android:gravity="center_vertical"/>
+
+</LinearLayout>

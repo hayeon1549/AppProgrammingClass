@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/btn01"
+        android:title="편집">
+    </item>
+    <item
+        android:id="@+id/btn02"
+        android:title="정렬">
+    </item>
+    <item
+        android:id="@+id/btn03"
+        android:title="전체설정">
+    </item>
+</menu>

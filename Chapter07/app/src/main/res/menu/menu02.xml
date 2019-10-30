@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/btn1"
+        android:title="컨텍스트 메뉴">
+    </item>
+
+    <item
+        android:id="@+id/btn2"
+        android:title="상호작용 메뉴">
+    </item>
+</menu>

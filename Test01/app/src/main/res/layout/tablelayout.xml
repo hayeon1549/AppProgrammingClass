@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+ 위젯을 표 형태로 배치할 때 사용함.
+ 행의 갯수를 <TableRow> ... </TableRow>
+
+ -TableLayout에 적용 가능한 옵션
+ stretchColumns = 열들의 폭을 늘림. 보통 *을 넣어 꽉 채우게 늘림.
+
+ -위젯에 적용 가능한 옵션
+ Layout_span = "int"
+ Layout_column = "int"
+ -->
+
+<TableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:stretchColumns="*">
+    <TableRow>
+        <Button />
+        <Button/>
+        <Button/>
+    </TableRow>
+    <TableRow>
+        <Button
+            android:layout_span="2"/>
+    </TableRow>
+    <TableRow>
+        <Button android:layout_column="2" />
+    </TableRow>
+    <TableRow>
+        <Button />
+        <Button />
+        <Button />
+    </TableRow>
+</TableLayout>
