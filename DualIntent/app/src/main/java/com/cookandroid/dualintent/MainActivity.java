@@ -29,17 +29,20 @@ public class MainActivity extends AppCompatActivity {
                 int n1 = Integer.parseInt(num1.getText().toString());
                 int n2 = Integer.parseInt(num2.getText().toString());
 
+                // 1. putData
                 Intent intent = new Intent(getApplicationContext(), SecondActivity.class);
                 intent.putExtra("putHap",n1+n2);
-                // 양방향 액티비티 위해서 메소드가 달라짐
+                // 2. 주고받기를 할 목적으로 Intent를 사용하려면
+                // startActivity + ForResult 메소드로 명명하여야 함.
+                // 첫 번째 인자는 intent, 두번 째 인자는 돌려받을 값이 있을 경우 0 이상의 수
                 startActivityForResult(intent,0);
             }
         });
     }
 
-    // SecondActivity에서 넘겨준 내용을 받기 위해 메소드 오버라이딩
-
-
+    // 7. MainActivity는 onActivityResult() 메소드를
+    // 오버라이딩하여 메소드 안에서 getXXXExtra()로 데이터 사용.
+    // 오버라이딩 된 메소드에서의 입력 읹자들(resultCode, data)를 사용
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         if(resultCode == RESULT_OK){

@@ -24,16 +24,17 @@ public class SecondActivity extends Activity {
         btn = (Button)findViewById(R.id.returnBtn);
 
         Intent inIntent = getIntent();
-        int hap = inIntent.getIntExtra("putHap",0);
-        tv.setText("MainActivity로부터 넘겨받은 값 : "+hap);
+        final int hap = inIntent.getIntExtra("putHap",0);
+        tv.setText(Integer.toString(hap));
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                // 4~ 6 새로운 인텐트에 담아서 setResult라는 메소드로 전송
                 Intent returnIntent = new Intent(getApplicationContext(),MainActivity.class);
                 String str = et.getText().toString();
                 returnIntent.putExtra("outData",str);
-                setResult(RESULT_OK,returnIntent);
+                setResult(RESULT_OK, returnIntent);
                 finish();
             }
         });
