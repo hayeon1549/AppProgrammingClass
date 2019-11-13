@@ -1,6 +1,7 @@
 package com.cookandroid.adapterviewexercise;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
 import android.os.Bundle;
 import android.view.ContextThemeWrapper;
@@ -21,6 +22,8 @@ public class GridViewEx extends Activity {
         setTitle("그리드뷰 테스트");
 
         final GridView gv = (GridView)findViewById(R.id.gridView);
+        MyGridAdapter gridAdap = new MyGridAdapter(this);
+        gv.setAdapter(gridAdap);
     }
 
     // onCreate{} 바깥쪽에 새로운 클래스를 생성
@@ -71,7 +74,21 @@ public class GridViewEx extends Activity {
 
             iv.setImageResource(posterId[i]);
 
-            return null;
+            final int position = i;
+            iv.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    View dialogView = (View)View.inflate(GridViewEx.this, R.layout.movie_dialog, null);
+                    AlertDialog.Builder dlg = new AlertDialog.Builder(GridViewEx.this);
+                    ImageView bigPoster = (ImageView)dialogView.findViewById(R.id.bigPoster);
+                    bigPoster.setImageResource(posterId[position]);
+                    dlg.setView(dialogView);
+                    dlg.setNegativeButton("닫기", null);
+                    dlg.show();
+                }
+            });
+
+            return iv;
         }
     }
 }
