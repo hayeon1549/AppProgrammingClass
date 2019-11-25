@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:background="#fff">
+
+    <LinearLayout
+        android:layout_gravity="start"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:background="#fff"
+        android:gravity="center_vertical"
+        android:elevation="15dp">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/settings"
+            android:backgroundTint="#fff"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="설정"
+            android:textSize="20dp"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:paddingStart="40dp"/>
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/profile"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:backgroundTint="#cecece"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="15dp"
+        android:elevation="10dp"
+        android:background="#fff"
+        android:scaleType="fitXY"/>
+
+    <Button
+        android:layout_width="95dp"
+        android:layout_height="30dp"
+        android:background="@drawable/button_background"
+        android:elevation="10dp"
+        android:text="Log-in"
+        android:textStyle="bold"
+        android:textSize="13dp"
+        android:layout_marginBottom="50dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="20dp"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="50dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:textSize="18dp"
+                android:text="잠금"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#b6b5b5"
+                android:textSize="10dp"
+                android:text="내 기분, 나만 확인하고 싶을 때"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="50dp"
+            android:track="@drawable/switch_track_selector"
+            android:thumb="@drawable/switch_thumb"
+            android:id="@+id/swlock"/>
+
+    </LinearLayout> <!-- 잠금 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="20dp"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="50dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:textSize="18dp"
+                android:text="알림"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#b6b5b5"
+                android:textSize="10dp"
+                android:text="알림을 보내드릴까요?"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="50dp"
+            android:track="@drawable/switch_track_selector"
+            android:thumb="@drawable/switch_thumb"
+            android:id="@+id/swalert"/>
+
+    </LinearLayout> <!-- 알림 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="20dp"
+        android:gravity="center_vertical"
+        android:id="@+id/layoutalert"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="50dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:textSize="18dp"
+                android:text="알림 시간"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#b6b5b5"
+                android:textSize="10dp"
+                android:text="언제 작성하실건가요?"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <TimePicker
+            android:id="@+id/timePicker"
+            android:layout_width="wrap_content"
+            android:layout_height="90dp"
+            android:timePickerMode="spinner" />
+
+        <Button
+            android:layout_width="45dp"
+            android:layout_height="30dp"
+            android:text="저장"
+            android:background="#fff"
+            android:textColor="#9f9f9f"
+            android:id="@+id/btnalert"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="50dp"/>
+
+    </LinearLayout> <!-- 알림 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="20dp"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="50dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:textSize="18dp"
+                android:text="위로 한마디"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#b6b5b5"
+                android:textSize="10dp"
+                android:text="우울할 때 위로가 될 한마디"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="50dp"
+            android:track="@drawable/switch_track_selector"
+            android:thumb="@drawable/switch_thumb"
+            android:id="@+id/swword"/>
+
+    </LinearLayout> <!-- 위로 한마디 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="20dp"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="50dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:textSize="18dp"
+                android:text="개발자들"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#b6b5b5"
+                android:textSize="10dp"
+                android:text="디자인 이소은"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#b6b5b5"
+                android:textSize="10dp"
+                android:text="프론트 이주용, 김기강, 홍하연, 하수민"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#b6b5b5"
+                android:textSize="10dp"
+                android:text="백엔드 남아현"/>
+
+        </LinearLayout>
+
+    </LinearLayout> <!-- 개발자들 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="20dp"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="50dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:textSize="18dp"
+                android:text="버전"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#b6b5b5"
+                android:textSize="10dp"
+                android:text="1.0.0"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
